@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>listings-Adwhale</title>
+  <!--
+  - favicon
+-->
+  <link
+          rel="shortcut icon"
+          href="/assets/images/R.E.img/logo/icon.svg"
+          type="image/x-icon"
+  />
+  <!--
+  - custom css link
+-->
+  <link rel="stylesheet" href="/assets/css/style-prefix.css" />
+  <!--
+  - google font link
+-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+  />
+  <link
+          rel="stylesheet"
+          data-purpose="Layout StyleSheet"
+          title="Web Awesome"
+          href="/css/app-wa-a60ddbceb7292f11c9e430d067b1eb9f.css?vsn=d"
+  />
+
+  <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+  />
+  <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+  />
+  <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+  />
+
+  <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+  />
+
+  <link
+          rel="stylesheet"
+          href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+  />
+
+  <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BPMS41FJD2"
+  ></script>
+  <script
+          src="https://kit.fontawesome.com/b878b926f7.js"
+          crossorigin="anonymous"
+  ></script>
+
+</head>
+
+<body>
+<!--
+- HEADER
+-->
+
+<section id="listingsPage">
+  <div class="house-details">
+    <div class="house-titel">
+      <h1 class="name"></h1>
+      <div class="row">
+        <div class="sub-row">
+          <div class="showcase-rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+          <span> 245 Reviews </span>
+          <div class="location">
+            <p class="locationLis"></p>
+          </div>
+          <div class="type-listings">
+            <p class="type"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- i think here where i can fetch the data  -->
+     
+    <div class="gallery-leistings">
+    <div class="gallery-img1"><img src="" alt="" /></div>
+      <div><img src="" alt="" /></div>
+      <div><img src="" alt="" /></div>
+      <div><img src="" alt="" /></div>
+      <div><img src="" alt="" /></div>
+    </div>
+    <div class="listing-container">
+      <!-- left column goes here  -->
+      <div class="left-col descriptions">
+        <div class="small-details">
+          <h1 class="price" name=""></h1>
+          <h3 class="decription"></h3>
+          <p class="hous-statu"></p>
+        </div>
+        <form action="/paypal/pay" method="GET" class="check-form" >
+          <div>
+            <label for="">Check-in</label>
+            <input type="text" placeholder="Add check-in date" />
+          </div>
+          <div>
+            <label for="">Check-out</label>
+            <input type="text" placeholder="Add check-out date" />
+          </div>
+          <div class="guest-field">
+            <input type="hidden" name="amount" id="amount">
+            <input type="hidden" name="transactionId" id="transactionId">
+            <input type="hidden" name="agencyId" id="agencyId">
+            <input type="hidden" name="propertyId" id="propertyId">
+            <button type="submit" class="payButton">Pay with PayPal</button>
+
+          </div>
+
+
+        </form>
+        <ul class="detail-list">
+          <li>
+            <i class="fa-light fa-person-booth"></i>
+            Room in a bungalow
+            <span
+            >Your own room in a home, plus access to shared spaces.</span
+            >
+          </li>
+          <li>
+            <i class="fa-light fa-house-user"></i>
+            Shared common spaces
+            <span
+            >You'll share parts of the home with the Host and other
+                  guests.</span
+            >
+          </li>
+          <li>
+            <i class="fa-light fa-shower"></i>
+            Private attached bathroom
+            <span
+            >This place has a bathroom that’s connected to your
+                  room.</span
+            >
+          </li>
+          <li>
+            <i class="fa-light fa-badge-check"></i>
+            trust is a Superhost
+            <span>Superhosts are experienced, highly rated Hosts.</span>
+          </li>
+        </ul>
+        <!-- show more button  -->
+        <div class="read-more-container">
+          <h2 class="name">What's special</h2>
+          <div class="containerRedMore">
+            <p class="readAndShow">
+              Adwhale Properties
+              <span class="read-more-text">
+                    Elle comprend 6 chambres
+                    élégantes, dont une suite parentale avec terrasse
+                    privée, 2 cuisines bien équipées, 3 salles de bain
+                     modernes, et 3 vastes salons munis de cheminées.
+                     Son emplacement privilégié, son confort et son
+                     élégance inégalés, ainsi que sa luminosité
+                     naturelle en font une résidence d’exception à Tanger,
+                    offrant un cadre de vie luxueux et accueillant.
+                  </span>
+            </p>
+            <span class="read-more-btn">Read More...</span>
+          </div>
+        </div>
+        <!-- location map  -->
+        <div class="map">
+          <h1>Where you’ll be</h1>
+          <h4 class="name">Ouzoud, Tadla-Azilal, Morocco</h4>
+          <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1691.5188233097745!2d-6.720373911545713!3d32.0140939033778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sOuzoud!5e0!3m2!1sen!2sma!4v1714597978337!5m2!1sen!2sma"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <!-- agent information photos and listing month date and time -->
+        <div class="agentInformation">
+          <div class="profile-details">
+            <img src="/assets/images/testimonial-1.jpg" alt="" />
+            <div class="name-job">
+              <h3 class="name">Eliena Cardlos</h3>
+              <h3 class="posted-listing">15/01/2023</h3>
+              <h4 class="job">Real estate Agent</h4>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <a href="#" class="contact-host"></a>
+        </div>
+        <!--
+- MODAL
+-->
+        <button id="myBtn"><a href="#">Contact agent</a>
+          <p>Get info on this home, tour, and more</p>
+        </button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modalListing" style="overflow: hidden">
+          <!-- Modal content -->
+          <div class="modal-contentLi">
+            <ion-icon name="close-circle-outline" class="close"></ion-icon>
+            <form action="#">
+              <div class="newsletter-header nh-st">
+                <h3 class="newsletter-title ntit">Contact agent</h3>
+
+                <p class="newsletter-desc">
+                  Contact <b>Agent</b> to get more information that you need
+                </p>
+              </div>
+              <label for="">Full Name</label>
+              <input
+                      type="text"
+                      name="text"
+                      class="email-field"
+                      placeholder="Full Name"
+                      required
+              />
+              <label for="">Phone Number</label>
+              <input
+                      type="tel"
+                      name="Phone"
+                      class="email-field"
+                      placeholder="Phone Number"
+                      required
+              />
+              <label for="">Email</label>
+              <input
+                      type="email"
+                      name="email"
+                      class="email-field"
+                      placeholder="Email Address"
+                      required
+              />
+              <label for="">Message</label>
+              <textarea class="textareaStyle"
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="10"
+              ></textarea>
+              <button type="submit" class=" btnListings">
+                Contact agent
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-nav">
+    <div class="container">
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <h2 class="nav-title">Popular Categories</h2>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Fashion</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Electronic</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Cosmetic</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Health</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Watches</a>
+        </li>
+      </ul>
+
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <h2 class="nav-title">Products</h2>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Prices drop</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">New products</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Best sales</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Contact us</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Sitemap</a>
+        </li>
+      </ul>
+
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <h2 class="nav-title">Our Company</h2>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Delivery</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Legal Notice</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Terms and conditions</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">About us</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Secure payment</a>
+        </li>
+      </ul>
+
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <h2 class="nav-title">Services</h2>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Prices drop</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">New products</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Best sales</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Contact us</a>
+        </li>
+
+        <li class="footer-nav-item">
+          <a href="#" class="footer-nav-link">Sitemap</a>
+        </li>
+      </ul>
+
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <h2 class="nav-title">Contact</h2>
+        </li>
+
+        <li class="footer-nav-item flex">
+          <div class="icon-box">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+
+          <address class="content">
+            419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
+          </address>
+        </li>
+
+        <li class="footer-nav-item flex">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <a href="tel:+607936-8058" class="footer-nav-link"
+          >(607) 936-8058</a
+          >
+        </li>
+
+        <li class="footer-nav-item flex">
+          <div class="icon-box">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+
+          <a href="mailto:example@gmail.com" class="footer-nav-link"
+          >example@gmail.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <h2 class="nav-title">Follow Us</h2>
+        </li>
+
+        <li>
+          <ul class="social-link">
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <img
+              src="/assets/images/payment.png"
+              alt="payment method"
+              class="payment-img"
+      />
+
+      <p class="copyright">
+        Copyright &copy; <a href="#">Anon</a> all rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  // show more and less content
+  const parentContainer = document.querySelector(".read-more-container");
+  parentContainer.addEventListener("click", (event) => {
+    const current = event.target;
+    const isReadMoreBtn = current.className.includes("read-more-btn");
+    if (!isReadMoreBtn) return;
+    const currentText =
+            event.target.parentNode.querySelector(".read-more-text");
+    currentText.classList.toggle("read-more-text--show");
+    current.textContent = current.textContent.includes("Read More")
+            ? "Read Less..."
+            : "Read More...";
+  });
+  // ----------------------------
+  let listing = null;
+
+  // get datas from file json
+  fetch("/data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            listing = data;
+            showDetail();
+          })
+
+  // find the listings
+  function showDetail() {
+    let detail = document.querySelector(".house-details");
+    let listingID = new URLSearchParams(window.location.search).get("id");
+    let Thislistings = listing.filter((value) => {
+      return value.id == listingID;
+    })[0];
+    // Set the value of the hidden input field
+    document.getElementById('transactionId').value = listingID; 
+
+    // if no listing has id = listingID
+    if (!Thislistings) {
+     // window.location.href = "/404eror";
+    } else {
+      let galleryContainer = detail.querySelector(".gallery-leistings");
+
+      // Clear existing images
+      galleryContainer.innerHTML = "";
+
+      // Add main image
+      addImageToGallery(
+              Thislistings.image1,
+              galleryContainer,
+              "gallery-img1"
+      );
+
+      // Add additional images
+      addImageToGallery(
+              Thislistings.image2,
+              galleryContainer,
+              "gallery-img"
+      );
+      addImageToGallery(
+              Thislistings.image3,
+              galleryContainer,
+              "gallery-img"
+      );
+      addImageToGallery(
+              Thislistings.image4,
+              galleryContainer,
+              "gallery-img"
+      );
+      addImageToGallery(
+              Thislistings.image5,
+              galleryContainer,
+              "gallery-img"
+      );
+      // addImageToGallery(Thislistings.image07, galleryContainer, 'gallery-img');
+
+      // Add other details
+      detail.querySelector(".house-titel .name").innerText =
+              Thislistings.description;
+      detail.querySelector(
+              ".listing-container .descriptions .small-details .price"
+      ).innerText = "$" + Thislistings.prix;
+      detail.querySelector(
+              ".house-titel .row .sub-row .type-listings .type"
+      ).innerText = Thislistings.typeBien;
+      detail.querySelector(
+              ".house-titel .row .sub-row .location .locationLis"
+      ).innerText = Thislistings.ville;
+      detail.querySelector(
+              ".listing-container .descriptions .small-details .decription"
+      ).innerText = Thislistings.description;
+
+      document.getElementById('amount').value = Thislistings.prix;
+      document.getElementById('agencyId').value = Thislistings.idAgence;
+      document.getElementById('propertyId').value = Thislistings.id;
+
+    }
+  }
+
+  // Function to add image to gallery
+  function addImageToGallery(imageSrc, container, cssClass) {
+    if (imageSrc) {
+      // Remove 'src/main/resources/static/' from the imageSrc path
+      let adjustedSrc = imageSrc.substring('src/main/resources/static/'.length);
+
+      let imgElement = document.createElement("img");
+      imgElement.src = adjustedSrc; // Use adjustedSrc here
+      imgElement.alt = "Gallery Image";
+
+      let divElement = document.createElement("div");
+      divElement.classList.add(cssClass);
+      divElement.appendChild(imgElement);
+
+      container.appendChild(divElement);
+    }
+  }
+</script>
+<!--
+- FOOTER
+-->
+<!--
+- custom js link
+-->
+<script src="/assets/js/script.js"></script>
+<!--
+- ionicon link
+-->
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+</body>
+</html>
